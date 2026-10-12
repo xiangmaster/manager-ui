@@ -5,6 +5,9 @@ on:
     # change); the triage job below stays gated to `opened` only.
     types: [opened, edited]
 
+env:
+  ANTHROPIC_BASE_URL: https://api.openlux.ai
+
 jobs:
   # Separate job (not a step in `triage`) so it has its own concurrency group
   # and its own gate. `triage` now depends on this job's `tier` output (see
